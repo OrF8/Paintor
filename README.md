@@ -1,4 +1,4 @@
-# paintor
+# Paintor
 A small painter program made by OF8.
 
 Created as final project for course
