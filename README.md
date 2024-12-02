@@ -7,8 +7,9 @@ at The Hebrew University of Jerusalem.
 
 ### Final Grade: 91
 
-To use, create a python virtual environment.
-Then, Extract the zipped files to the venv directory.
-Then, activate the venv.
-Then, pip install -r requirements.txt.
+# How To use:
+1. create a python virtual environment.
+2. Extract the zipped files to the venv directory.
+3. activate the venv.
+4. pip install -r requirements.txt.
 Enjoy!
