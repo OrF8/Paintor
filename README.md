@@ -8,8 +8,9 @@ at The Hebrew University of Jerusalem.
 ### Final Grade: 91
 
 # How To use:
-1. create a python virtual environment.
+1. Create a python virtual environment.
 2. Extract the zipped files to the venv directory.
-3. activate the venv.
+3. Activate the venv.
 4. pip install -r requirements.txt.
+5. Run main.py
 Enjoy!
