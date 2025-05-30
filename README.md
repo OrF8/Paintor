@@ -2,7 +2,7 @@
 Paintor is a lightweight, vector-based painting application developed in Python using Tkinter. It was created as the final project for the course [**67101-1 Introduction to Computer Science**](https://shnaton.huji.ac.il/index.php/NewSyl/67101/2/2024/)
 at The Hebrew University of Jerusalem ([**HUJI**](https://en.huji.ac.il/)).
 
-The project received a final grade of 91.
+> 🎓 Final Grade: **91**
 
 # 🧰 Features
 - Intuitive GUI built with Tkinter
