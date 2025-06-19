@@ -54,6 +54,7 @@ This repo uses a .devcontainer with GUI support via desktop-lite, so you can eve
   ````
   The Paintor window will open inside the browser!
 > ⏳ Note: The initial Codespace setup may take a few minutes (typically about 5), especially the first time. Subsequent loads will be faster.
+
 > ⚠️ If you get a “no display” error, ensure you’re running the script inside the virtual desktop environment (via port 6080 in your browser).
 
 # 🗂️ Project Structure
