@@ -4,34 +4,36 @@ at The Hebrew University of Jerusalem ([**HUJI**](https://en.huji.ac.il/)).
 
 > 🎓 Final Grade: **91**
 
-# 🧰 Features
+## 🧰 Features
 - Intuitive GUI built with Tkinter
 - Vector-based drawing capabilities
 - Modular code structure utilizing classes and lambdas
 - File I/O support for saving and loading artwork
 - Customizable canvas settings
 
-# 🚀 Getting Started
-## Prerequisites
+## 🚀 Getting Started
+### Prerequisites
 - Python 3.x (Preferably 3.9)
-- ````tkinter```` library (usually included with Python)
-## Installation
+- `tkinter` library (usually included with Python)
+### Installation
 1. Clone the repository:
    ````
    git clone https://github.com/OrF8/Paintor.git
    cd Paintor
    ````
 2. Create and activate a virtual environment:
-   ````
+   ````bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ````
+   ````bash
+   source venv/bin/activate     # On Windows: venv\Scripts\activate
    ````
 3. Install dependencies:
-   ````
+   ````bash
    pip install -r requirements.txt
    ````
 4. Run the application:
-   ````
+   ````bash
    python main.py
    ````
 
