@@ -49,7 +49,8 @@ This uses the included `.devcontainer/` configuration:
   python main.py
   ````
   or use the integrated debugger/terminal, all set up automatically.
-> ⏳ Note: The initial Codespace setup may take a few minutes (typically up to 5), especially the first time. Subsequent loads will be faster.
+> ⏳ Note: The initial Codespace setup may take a few minutes (typically about 5), especially the first time. Subsequent loads will be faster.
+> ⚠️ If you get a “no display” error, ensure you’re running the script inside the virtual desktop environment (via port 6080 in your browser).
 
 # 🗂️ Project Structure
 ````
