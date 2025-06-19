@@ -4,40 +4,57 @@ at The Hebrew University of Jerusalem ([**HUJI**](https://en.huji.ac.il/)).
 
 > 🎓 Final Grade: **91**
 
-# 🧰 Features
+## 🧰 Features
 - Intuitive GUI built with Tkinter
 - Vector-based drawing capabilities
 - Modular code structure utilizing classes and lambdas
 - File I/O support for saving and loading artwork
 - Customizable canvas settings
 
-# 🚀 Getting Started
-## Prerequisites
+## 🚀 Getting Started
+### 💻 Running Locally
+#### Prerequisites
 - Python 3.x (Preferably 3.9)
-- ````tkinter```` library (usually included with Python)
-## Installation
+- `tkinter` library (usually included with Python)
+#### Installation
 1. Clone the repository:
    ````
    git clone https://github.com/OrF8/Paintor.git
    cd Paintor
    ````
-2. Create and activate a virtual environment:
-   ````
+2. (Optional but recommended): Create and activate a virtual environment:
+   ````bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate     # On Windows: venv\Scripts\activate
    ````
 3. Install dependencies:
-   ````
+   ````bash
    pip install -r requirements.txt
    ````
 4. Run the application:
-   ````
+   ````bash
    python main.py
    ````
+
+### 🛠️ Running via Dev Container or GitHub Codespace
+If you want to skip local setup and run Paintor in a completely containerized environment (no installations needed), you can use:
+- GitHub Codespaces: click Code → Open with Codespaces on GitHub and start a new Codespace.
+- VS Code Remote – Containers: simply open the repo in VS Code and choose Reopen in Container when prompted.
+
+This uses the included `.devcontainer/` configuration:
+- Base image: Python 3.9
+- Auto-setup: installs dependencies via requirements.txt
+- Ready to run: after opening, run:
+  ````bash
+  python main.py
+  ````
+  or use the integrated debugger/terminal, all set up automatically.
+> ⏳ Note: The initial Codespace setup may take a few minutes (typically up to 5), especially the first time. Subsequent loads will be faster.
 
 # 🗂️ Project Structure
 ````
 Paintor/
+├── .devcontainer/          # Dev‑container configuration for reproducible dev setup
 ├── bigvars.py             # Global variables and configurations
 ├── canvas.py              # Canvas rendering and drawing logic
 ├── file_manager.py        # File I/O operations for saving/loading
