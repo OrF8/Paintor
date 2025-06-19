@@ -41,14 +41,18 @@ If you want to skip local setup and run Paintor in a completely containerized en
 - GitHub Codespaces: click Code → Open with Codespaces on GitHub and start a new Codespace.
 - VS Code Remote – Containers: simply open the repo in VS Code and choose Reopen in Container when prompted.
 
-This uses the included `.devcontainer/` configuration:
-- Base image: Python 3.9
-- Auto-setup: installs dependencies via requirements.txt
-- Ready to run: after opening, run:
+This repo uses a .devcontainer with GUI support via desktop-lite, so you can even run the Tkinter GUI:
+
+🖥️ How to Run the GUI
+1. Open the container (Codespace or locally with Dev Containers).
+2. Open the forwarded port 6080.
+3. Log into the web-based desktop (default password: `vscode`).
+4. Open a terminal inside the virtual desktop.
+5. Run:
   ````bash
   python main.py
   ````
-  or use the integrated debugger/terminal, all set up automatically.
+  The Paintor window will open inside the browser!
 > ⏳ Note: The initial Codespace setup may take a few minutes (typically about 5), especially the first time. Subsequent loads will be faster.
 > ⚠️ If you get a “no display” error, ensure you’re running the script inside the virtual desktop environment (via port 6080 in your browser).
 
