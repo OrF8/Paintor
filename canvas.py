@@ -18,7 +18,7 @@ class CanvasApp:
     Class that represents a canvas drawing app.
 
     Attributes:
-        master (tk.Tk): The master window of the canvas.
+        master (tk.Tk): The primary window of the canvas.
         canvas (tk.Canvas): The canvas to be drawn over.
         actions (List[Dict[str, Any]]): A list containing all the done actions.
         file_path (str): The path the canvas has been saved to.
@@ -27,7 +27,7 @@ class CanvasApp:
     def __init__(self, master: tk.Tk, is_load: bool = False) -> None:
         """
         Initialize the canvas.
-        :param master: The master window of the canvas.
+        :param master: The primary window of the canvas.
         :param is_load: Whether to load an existing canvas or not.
                         Default value is False.
         """
@@ -77,8 +77,7 @@ class CanvasApp:
         self.__selected_object_start_y: int = 0
 
         # Initialize default values regarding the drawing
-        self.__outline_color: str = "white" if self.canvas.cget('bg') == "black"\
-            else "black"
+        self.__outline_color: str = "white" if self.canvas.cget('bg') == "black" else "black"
         self.__line_width: int = 2
         self.__eraser_width: int = 10
         self.__fill: str = ''
@@ -128,15 +127,12 @@ class CanvasApp:
         """
         for button in buttons:
             button.config(
-                state=tk.DISABLED if not self.canvas.find_all()
-                else tk.NORMAL
+                state=tk.DISABLED if not self.canvas.find_all() else tk.NORMAL
             )
         # These are not part of self.__config_buttons
         # because they are configured differently than the rest of the buttons
-        self.__undo_button.config(state=tk.DISABLED if not self.actions
-                                  else tk.NORMAL)
-        self.__redo_button.config(state=tk.DISABLED if not
-                                  self.__undone_actions else tk.NORMAL)
+        self.__undo_button.config(state=tk.DISABLED if not self.actions else tk.NORMAL)
+        self.__redo_button.config(state=tk.DISABLED if not self.__undone_actions else tk.NORMAL)
 
     def __init_frame_buttons(self) -> None:
         """
@@ -1010,8 +1006,7 @@ class CanvasApp:
                     self.__buttons_config(*self.__config_buttons)
                     return
                 # Find all objects within a certain radius around the mouse cursor
-                overlapping_objects: Tuple[
-                    int, ...] = self.canvas.find_overlapping(
+                overlapping_objects: Tuple[int, ...] = self.canvas.find_overlapping(
                     event.x - self.__eraser_width,
                     event.y - self.__eraser_width,
                     event.x + self.__eraser_width,
@@ -1258,8 +1253,7 @@ class CanvasApp:
             if action_type == 'drawing':
                 self.canvas.delete(last_action['object'])
             elif action_type == 'moving':
-                self.canvas.coords(last_action['object'],
-                                   *last_action['prev_state'])
+                self.canvas.coords(last_action['object'], *last_action['prev_state'])
             elif action_type == 'change outline color':
                 self.canvas.itemconfig(last_action['object'],
                                        outline=last_action['prev_state'])
@@ -1401,7 +1395,7 @@ class CanvasApp:
         if ans:
             ans = messagebox.askyesno(title="Save Canvas",
                                       message="Would you like to save your "
-                                              "canvas for future drawins?")
+                                              "canvas for future drawings?")
             if ans:
                 self.__save_canvas()
             self.master.quit()

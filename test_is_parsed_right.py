@@ -34,7 +34,7 @@ from file_manager import is_parsed_correctly, check_required_keys, \
     # Missing width for the rectangle object
     ([{'mode': 'white'}, {"type": "text", "coords": [0, 0], "fill": "white",
                           "font": "Arial"}], False),
-    # Missing text for text object
+    # Missing text for the text object
     ([{'mode': 'white'},
       {"type": "line", "coords": [0, 0], "fill": "black", "width": 1},
       {"type": "invalid_type"}], False)  # Mixed valid and invalid objects

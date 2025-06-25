@@ -23,12 +23,12 @@ else:
     ]
 
 
-def on_enter(event: tk.Event, fg: str = '') -> None:
+def on_enter(event: tk.Event, fg: str = "") -> None:
     """
     This function handles the "<Enter>" event.
     :param event: The event to handle.
     :param fg: The color to change the foreground to.
-               Defaults to empty string.
+               The default is empty string.
     """
     event.widget.config(bg="light gray")
     if fg != '':
@@ -37,7 +37,7 @@ def on_enter(event: tk.Event, fg: str = '') -> None:
 
 def on_leave(event: tk.Event, bg: str = "white", fg: str = "black") -> None:
     """
-    Thi function handles the "<Leave>" event.
+    The function handles the "<Leave>" event.
     :param event: The event to handle.
     :param bg: The color to change the background to.
                Defaults to white
@@ -64,6 +64,11 @@ class State:
     def __init__(self, state: str = 'F') -> None:
         """
         Initializes the IsClicked object with False as the default value.
+        :param state: The state of the user.
+                      'T' if the user wants to load an existing canvas,
+                      'F' if the user does not want to load an existing canvas,
+                      '' if the user exited the hello screen.
+                      The default is 'F'.
         """
         self.state: str = state
 
@@ -72,7 +77,7 @@ def tutorial(window: tk.Tk, is_load: State) -> None:
     """
     This function shows a tutorial on how to use the Or's Illustrator.
     :param window: A window to destroy.
-    :param is_load: Whether or not the user wants to load an existing canvas.
+    :param is_load: Whether the user wants to load an existing canvas or not.
     """
     window.destroy()
     window = tk.Tk()
@@ -83,8 +88,8 @@ def tutorial(window: tk.Tk, is_load: State) -> None:
     def show_new_image(plus: bool = True) -> None:
         """
         This function shows the next image and configures the buttons.
-        :param plus: Whether or not to increment the current index.
-                     If plus=True, increment the index.
+        :param plus: Whether to increment the current index or not.
+                     If True, increment the index.
                      Else, decrement the index.
         """
         nonlocal current_image_index
@@ -94,8 +99,7 @@ def tutorial(window: tk.Tk, is_load: State) -> None:
         else:
             if current_image_index == 0:
                 # If we get here, this means the user pressed the left arrow
-                # and the image is the first image,
-                # so do nothing (return)
+                # and the image is the first image - do nothing (return)
                 return
             # Decrement index to show the previous image
             current_image_index -= 1
@@ -176,7 +180,7 @@ def on_exit(window: tk.Tk, is_load: State) -> None:
     """
     This function that handles the "WM_DELETE_WINDOW" event.
     :param window: A window to destroy.
-    :param is_load: Whether or not the user wants to load an existing canvas.
+    :param is_load: Whether the user wants to load an existing canvas or not.
     """
     # Make sure the user wants to exit the program
     ans = messagebox.askyesno(title="Exit?",
